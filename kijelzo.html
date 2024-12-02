@@ -9,17 +9,35 @@
     <link rel="stylesheet" href="kijelzo.css">
 </head>
 <body>
-    <header>
+<div class="keret">
+    <header class="fej">
         <h1>Mathiász bajnokság</h1>
     </header>
-    <div>
 
-
+<div class="kozep">
+    <div class="eredmeny1">
+        <h1 id="csapat1">
+            HAZAI CSAPAT
+        </h1>
     </div>
+    <div class="muutato">
+        <h1>SZÁMLÁLÓ</h1>
+        <div id="timer">10:00</div>
+        <button id="toggleButton">Stop</button>
 
+        <div id="hozzaadasContainer">
+            <input type="number" id="hozzaadasInput" placeholder="Idő másodpercben">
+            <button id="hozzaadasButton">Hosszabbítás hozzáadása</button>
+        </div>
+    </div>
+    <div class="eredmeny2">
+        <h1 id="csapat2">
+            VENDÉG
+        </h1>
+    </div>
+</div>
 
-
-    
+</div>
     <script src="java.js"></script>
 </body>
 </html>

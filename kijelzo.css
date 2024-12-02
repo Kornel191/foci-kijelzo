@@ -8,21 +8,108 @@
 body{
     background-image: url(img/kiskispalya.jpg);
     background-repeat: no-repeat;  
-    background-size: cover;        
-    background-position: center;   
+    background-size: cover;         
     height: 100vh;          
 }
-header{
-    background-color: rgba(0, 0, 0, 0.6); 
-    border-radius: 20px;
-    color: white;
+
+.keret{
+    display: block;
     text-align: center;
-    
+    margin: 0 auto;
+    height: 20%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+.fej{
+    background-color: rgba(0, 0, 0, 0.6); 
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    color: white; 
+    text-align: center; 
+    border-radius: 10px; 
+    height: 100px;
+    justify-content: center;
+    margin-bottom: 250px;
     width: 508px;
     height: 92px;
     left: 466px;
     gap: 0px;
     border: 1px 0px 0px 0px;
-    opacity: 0px;
+    opacity: 0px;    
+    margin-top: 280px;   
+    flex-direction: column
+    
+}
 
+
+.kozep{
+    display: flex;
+}
+
+.eredmeny1
+{
+    width: 466px;
+    height: 50px;
+    top: 168px;
+    gap: 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    left: 0;
+    
+}
+
+.mutato{
+    width: 466px;
+    height: 50px;
+    top: 168px;
+    gap: 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+    position: absolute; 
+    position: relative;
+    z-index: 1;
+}
+
+.eredmeny2
+{
+    width: 466px;
+    height: 50px;
+    top: 168px;
+    gap: 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    right: 0%;
+    
+}
+
+#timer {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 0;
+}
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+#hozzaadasContainer {
+    display: none; 
+    margin-top: 20px;
+}
+#hozzaadasInput {
+    margin-right: 10px;
 }
