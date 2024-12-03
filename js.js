@@ -19,12 +19,17 @@ function idok() {
     else 
     {
         clearInterval(idok);
+        hozzaadasContainer.style.display = 'block'; 
     }
+
     let m = Math.floor(ido / 60);
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
 }
+function pluszido() {
+    let plusz = parseInt(document.getElementById().value) *60;
 
+}
 
 
 
