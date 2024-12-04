@@ -17,13 +17,15 @@
 <div class="kozep">
     <div class="eredmeny1">
         <h1 id="csapat1NevKi">
-            HAZAI CSAPAT
+            
         </h1>
     </div>
     <div class="muutato">
         <h1>SZÁMLÁLÓ</h1>
         <div id="timer">10:00</div>
-        <button id="toggleButton">Stop</button>
+        <!--<button id="toggleButton" onclick="stop()">Stop</button>-->
+        <button type="button" id="stop" onclick="stop()">Stop</button>
+        <button type="button" id="start" onclick="idoStart()">Start</button>
 
         <div id="hozzaadasContainer">
             <input type="number" id="hozzaadasInput" placeholder="Idő másodpercben">
@@ -32,7 +34,7 @@
     </div>
     <div class="eredmeny2">
         <h1 id="csapat2NevKi">
-            VENDÉG
+            
         </h1>
     </div>
 </div>
