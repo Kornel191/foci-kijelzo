@@ -36,15 +36,32 @@ function idok() {
     {
         clearInterval(idok);
         hozzaadasContainer.style.display = 'block'; 
+        alert('Lejárt az idő!');
     }
 
     let m = Math.floor(ido / 60);
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
 }
-function pluszido() {
-    let plusz = parseInt(document.getElementById().value) *60;
 
+function pluszido() 
+{
+    let plusz = parseInt(document.getElementById("plusszInput").value) * 60;
 }
+function idoStartPlussz() {
+    idoszal = setInterval(idok, 1000);
+    startGomb.disabled = true;
+    stopGomb.disabled = false; 
+}
+function stopPlussz() {
+    clearInterval(idoszal);
+    startGomb.disabled = false;
+    stopGomb.disabled = true; 
+}
+
+hozzaadasButton.addEventListener('click', pluszido);
+
+
+
 
 

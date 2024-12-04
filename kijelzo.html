@@ -20,17 +20,20 @@
             
         </h1>
     </div>
-    <div class="muutato">
+    <div class="mutato">
         <h1>SZÁMLÁLÓ</h1>
         <div id="timer">10:00</div>
         <!--<button id="toggleButton" onclick="stop()">Stop</button>-->
-        <button type="button" id="stop" onclick="stop()">Stop</button>
         <button type="button" id="start" onclick="idoStart()">Start</button>
-
-        <div id="hozzaadasContainer">
-            <input type="number" id="hozzaadasInput" placeholder="Idő másodpercben">
-            <button type="button" id="hozzaadasButton">Hosszabbítás hozzáadása</button>
-        </div>
+        <button type="button" id="stop" onclick="stop()">Stop</button>
+        
+    <div id="plussz">
+        <h1>Hosszabbítás</h1>
+        <input type="number" id="plusszInput" placeholder="Idő másodpercben" min="1"><br>
+        <div id="timer">00:00</div>
+        <button type="button" id="start" onclick="idoStartPlussz()">Start</button>
+        <button type="button" id="stop" onclick="stopPlussz()">Stop</button>
+    </div>
     </div>
     <div class="eredmeny2">
         <h1 id="csapat2NevKi">
@@ -40,7 +43,7 @@
 </div>
 
 </div>
-    <!--<script src="java.js"></script>-->
+    <script src="java.js"></script>
     <script src="js.js"></script>
 </body>
 </html>

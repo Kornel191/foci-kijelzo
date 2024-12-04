@@ -2,11 +2,13 @@ let countdownTime = 10 * 60;
 let timerInterval;
 let isRunning = true;
 
-const timerElement = document.getElementById('timer');
-const toggleButton = document.getElementById('toggleButton');
+
 const hozzaadasContainer = document.getElementById('hozzaadasContainer');
 const hozzaadasButton = document.getElementById('hozzaadasButton');
 const hozzaadasInput = document.getElementById('hozzaadasInput');
+/*
+const timerElement = document.getElementById('timer');
+const toggleButton = document.getElementById('toggleButton');
 
 function updateTimerDisplay() {
     const minutes = Math.floor(countdownTime / 60);
@@ -39,7 +41,7 @@ function toggleTimer() {
         }
             isRunning = !isRunning;
         }
-
+*/
 function addExtraTime() {
     const extraTime = parseInt(hozzaadasInput.value, 10); 
     if (!isNaN(extraTime) && extraTime > 0) {
