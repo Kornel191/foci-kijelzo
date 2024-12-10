@@ -19,6 +19,12 @@
         <h1 id="csapat1NevKi">
             
         </h1>
+        <br>
+        <p id="csapat1pont">0</p>
+        <br>
+        <button id="cs1pluszpont" onclick="pontok1minus()" type="button">-</button>
+        <button id="cs1minuspont" onclick="pontok1plusz()" type="button">+</button>
+
     </div>
     <div class="mutato">
         <h1>SZÁMLÁLÓ</h1>
@@ -30,15 +36,20 @@
     <div id="plussz">
         <h1>Hosszabbítás</h1>
         <input type="number" id="plusszInput" placeholder="Perc" min="1" max="10"><br>
-        <div id="plusztimer">00:00</div>
-        <button type="button" id="startplusz" onclick="idoStartPlussz()">Start</button>
-        <button type="button" id="stopplusz" onclick="stopPlussz()">Stop</button>
+        <!--<div id="plusztimer">00:00</div>-->
+        <br>
+        <button type="button" id="pluszido" onclick="plusido()">ídő hozzáadása</button>
+        <!--<button type="button" id="stopplusz" onclick="stopPlussz()">Stop</button>-->
     </div>
     </div>
     <div class="eredmeny2">
         <h1 id="csapat2NevKi">
             
-        </h1>
+        </h1> <br>
+        <p id="csapat2pont">0</p>
+        <br>
+        <button id="cs2pluszpont" type="button">-</button>
+        <button id="cs2minuspont" type="button">+</button>
     </div>
 </div>
 

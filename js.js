@@ -3,9 +3,10 @@ let idoszal;
 let startGomb = document.getElementById("start");
 let stopGomb = document.getElementById("stop"); 
 let pluszidoszal;
-let startGombPlusz = document.getElementById("startplusz");
-let stopGombPlusz = document.getElementById("stopplusz"); 
-stopGomb.disabled = true;   
+let pluszidoGomb = document.getElementById("pluszido"); 
+stopGomb.disabled = true;
+
+
 
 function nevek() {
     let csapat1 = document.getElementById("csapat1").value;
@@ -47,6 +48,46 @@ function idok() {
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
 }
+
+
+
+function plusido()
+{
+    let pperc = parseInt(document.getElementById("plusszInput").value);
+    ido+= (pperc*60)
+    pluszidoGomb.disabled = true
+    pperc.disabled = true
+}
+
+
+let pont1 = 0
+let pont2 = 0
+
+let cs2Pont = parseInt(document.getElementById("csapat2pont").value)
+let cs1Pont = document.getElementById("csapat1pont")
+
+function pontok1plusz ()
+{
+    pont1++;
+    cs1Pont.innerHTML = pont1
+    
+}
+
+function pontok1minus ()
+{
+    if (pont1 == 0 )
+    {
+
+    }
+    else
+    {
+        pont1--;
+        let cs1Pont = document.getElementById("csapat1pont")
+        cs1Pont.innerHTML = pont1
+    }
+
+}
+
 /*
 function pluszido() 
 {
@@ -57,41 +98,9 @@ function pluszido()
 
 
 
-let pperc = parseInt(document.getElementById("plusszInput")).value;
-let pluszido = pperc * 60;
 
-function idoStartPlussz() {
-    if(pperc > 0 )
-    {
-        pluszidoszal = setInterval(pluszidok, 1000);
-        startGombPlusz.disabled = true;
-        stopGombPlusz.disabled = false; 
-    }
-}
-function stopPlussz() {
-    clearInterval(pluszidoszal);
-    startGombPlusz.disabled = false;
-    stopGombPlusz.disabled = true; 
-}
 
-function pluszidok() {
-    
-    let pluszora = document.getElementById("plusztimer");
-    if(pluszido > 0)
-    {
-        pluszido--;
-    }
-    else 
-    {
-        clearInterval(pluszidok);
-        /*hozzaadasContainer.style.display = 'block'; 
-        alert('Lejárt az idő!');*/
-    }
 
-    let pluszm = Math.floor(ido / 60);
-    let pluszs = ido % 60;
-    pluszora.innerHTML = `${pluszm}:${pluszs}`;
-}
 
 
 
