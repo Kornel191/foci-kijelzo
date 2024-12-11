@@ -6,23 +6,20 @@ let pluszidoszal;
 let pluszidoGomb = document.getElementById("pluszido"); 
 stopGomb.disabled = true;
 
+let pont1 = 0
+let pont2 = 0
 
+let cs2Pont = document.getElementById("csapat2pont")
+let cs1Pont = document.getElementById("csapat1pont")
 
-function nevek() {
-    let csapat1 = document.getElementById("csapat1").value;
-    let csapat2 = document.getElementById("csapat2").value;
+let minus1Gomb = document.getElementById("cs1minuspont")
+let minus2Gomb = document.getElementById("cs2minuspont")
 
-    if (csapat1 != "" && csapat2 != "")
-    {
-        document.getElementById("csapat1NevKi").innerHTML = csapat1;
-        document.getElementById("csapat2NevKi").innerHTML = csapat2;
-    }
-}
 
 function idoStart() {
     idoszal = setInterval(idok, 1000);
     startGomb.disabled = true;
-    stopGomb.disabled = false; 
+    stopGomb.disabled = false;
 }
 
 function stop() {
@@ -48,26 +45,17 @@ function idok() {
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
 }
-
-
-
+/*
 function plusido()
 {
     let pperc = parseInt(document.getElementById("plusszInput").value);
     ido+= (pperc*60)
     pluszidoGomb.disabled = true
     pperc.disabled = true
-}
+}*/
 
 
-let pont1 = 0
-let pont2 = 0
 
-let cs2Pont = document.getElementById("csapat2pont")
-let cs1Pont = document.getElementById("csapat1pont")
-
-let minus1Gomb = document.getElementById("cs1minuspont")
-let minus2Gomb = document.getElementById("cs2minuspont")
 function pontok1plusz()
 {
     pont1++;
@@ -129,6 +117,47 @@ const ki2 = localStorage.getItem("nev2")
 document.getElementById("csapat1NevKi").innerHTML = ki1;
 document.getElementById("csapat2NevKi").innerHTML = ki2;
 
+/*
+let pidoszal;
+let pperc = parseInt(document.getElementById("plusszInput").value) * 60;
+
+function pluszidoszal()
+{
+    if(ido ==0)
+    {
+        let pluszora = document.getElementById("plusztimer");
+        if(pperc > 0)
+        {
+            pperc--;
+        }
+        else 
+        {
+            clearInterval(pidoszal);
+    
+        }
+    
+        let pm = Math.floor(pperc / 60);
+        let ps = pperc % 60;
+        pluszora.innerHTML = `${pm}:${ps}`;
+    }
+
+
+}
+*/
+
+        /*hozzaadasContainer.style.display = 'block'; 
+        alert('Lejárt az idő!');*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -142,19 +171,6 @@ function pluszido()
 
 
 
-
-
-
-
-
-
-
-
-
-
 //hozzaadasButton.addEventListener('click', pluszido);
-
-
-
 
 
