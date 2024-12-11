@@ -1,5 +1,5 @@
 let lista = []
-let idoszal = setInterval(tick,1000)
+let idoszalha = setInterval(tick,1000)
 
 function Idokezeles()
 {

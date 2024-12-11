@@ -24,22 +24,20 @@ body{
 }
 .fej{
     background-color: rgba(0, 0, 0, 0.6); 
-    width: 100%;
     padding: 20px;
     display: flex;
     color: white; 
     text-align: center; 
-    border-radius: 10px; 
+    border-radius: 20px; 
     height: 100px;
     justify-content: center;
-    margin-bottom: 250px;
+    margin-bottom: 6%;
     width: 508px;
     height: 92px;
     left: 466px;
     gap: 0px;
     border: 1px 0px 0px 0px;
-    opacity: 0px;    
-    margin-top: 280px;   
+    margin-top: 30%;   
     flex-direction: column
     
 }
@@ -63,6 +61,7 @@ body{
     border-radius: 20px;
     left: 0;
     color: white;
+    margin-top: 1%;
     
 }
 
@@ -78,9 +77,11 @@ body{
     margin: 0 auto; 
     z-index: 1;
     flex-direction: column;
-    border-radius: 20px;
-    margin-left: 70px;
-    margin-right: 80px;
+    border-radius: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    margin-top: 1%;
 }
 
 .eredmeny2
@@ -96,6 +97,7 @@ body{
     border-radius: 20px;
     right: 0%;
     color: white;
+    margin-top: 1%;
     
 }
 
@@ -152,10 +154,12 @@ button {
     margin: 0 auto; 
     z-index: 1;
     flex-direction: column;
-    border-radius: 20px;
-    margin-left: 70px;
-    margin-right: 80px;
-    justify-content: center
+    border-radius: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+    margin-top: 5%;
+    
 }
 .kiallitasVendeg{
     width: 466px;
