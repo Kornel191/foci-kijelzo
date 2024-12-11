@@ -33,14 +33,7 @@
         <button type="button" id="start" onclick="idoStart()">Start</button>
         <button type="button" id="stop" onclick="stop()">Stop</button>
         
-    <div id="plussz">
-        <h1>Hosszabbítás</h1>
-        <input type="number" id="plusszInput" placeholder="Perc" min="1" max="10"><br>
-        <div id="plusztimer">00:00</div>
-        <br>
-        <button type="button" id="pluszido" onclick="plusido()">Idő hozzáadása</button>
-        <!--<button type="button" id="stopplusz" onclick="stopPlussz()">Stop</button>-->
-    </div>
+    
     </div>
     <div class="eredmeny2">
         <h1 id="csapat2NevKi">
@@ -52,8 +45,53 @@
         <button id="cs2pluszpont" onclick="pontok2plusz()" type="button">+</button>
     </div>
 </div>
+<div class="torzs">
+    <div class="kiallitasHazai">
+        <main>
+        <h2>Kiállítás</h2>
+            <form action="">
+                <input type="text" id="nev" placeholder="Név:"><br>
+                <input type="number" id="ido" min="1" placeholder="Idő"><br>
+    
+                <button type="button" id="gomb" onclick="Idokezeles()">Hozzáadás</button>
+            </form>
+        
+        
+        <ul id="felsor">
+
+        </ul>
+        
+        
+        
+    </div>
+    <div id="plussz" class="pluszido">
+        <h1>Hosszabbítás</h1>
+        <input type="number" id="plusszInput" placeholder="Perc" min="1" max="10"><br>
+        <div id="plusztimer">00:00</div>
+        <br>
+        <button type="button" id="pluszido" onclick="plusido()">Idő hozzáadása</button>
+        <!--<button type="button" id="stopplusz" onclick="stopPlussz()">Stop</button>-->
+    </div>
+    <div class="kiallitasVendeg">
+        <h2>Kiállítás</h2>
+        <form action="">
+            <input type="text" id="nev" placeholder="Név:"><br>
+            <input type="number" id="ido" min="1" placeholder="Idő"><br>
+
+            <button type="button" id="gomb" onclick="Idokezeles()">Hozzáadás</button>
+        </form>
+        <ul id="felsor">
+
+        </ul>
+        
+    </div>
+
+</div>
+
+
 
 </div>
     <script src="js.js"></script>
+    <script src="kiallitas.js"></script>
 </body>
 </html>

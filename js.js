@@ -48,10 +48,10 @@ function idok() {
 /*
 function plusido()
 {
-    let pperc = parseInt(document.getElementById("plusszInput").value);
+    let perc = parseInt(document.getElementById("plusszInput").value);
     ido+= (pperc*60)
     pluszidoGomb.disabled = true
-    pperc.disabled = true
+    perc.disabled = true
 }*/
 
 
@@ -147,13 +147,6 @@ function pluszidoszal()
 
         /*hozzaadasContainer.style.display = 'block'; 
         alert('Lejárt az idő!');*/
-
-
-
-
-
-
-
 
 
 

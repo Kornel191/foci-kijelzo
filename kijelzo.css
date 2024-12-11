@@ -47,6 +47,7 @@ body{
 
 .kozep{
     display: flex;
+    text-align: center;
 }
 
 .eredmeny1
@@ -115,4 +116,61 @@ button {
 }
 #hozzaadasInput {
     margin-right: 10px;
+}
+.torzs {
+    display: flex;
+    text-align: center;
+
+
+}
+.kiallitasHazai{
+    width: 466px;
+    height: 105%;
+    top: 168px;
+    gap: 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center; 
+    margin: 0 auto; 
+    z-index: 1;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 60px;
+    margin-right: 80px;
+    justify-content: center
+}
+.pluszido{
+    width: 466px;
+    height: 105%;
+    top: 168px;
+    gap: 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center; 
+    margin: 0 auto; 
+    z-index: 1;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 70px;
+    margin-right: 80px;
+    justify-content: center
+}
+.kiallitasVendeg{
+    width: 466px;
+    height: 105%;
+    top: 168px;
+    gap: 0px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center; 
+    margin: 0 auto; 
+    z-index: 1;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-left: 70px;
+    margin-right: 60px;
+    justify-content: center
 }
