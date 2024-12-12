@@ -4,16 +4,12 @@ let startGomb = document.getElementById("start");
 let stopGomb = document.getElementById("stop"); 
 let pluszidoszal;
 let pluszidoGomb = document.getElementById("pluszido"); 
-let pont1 = 0
-let pont2 = 0
-let cs2Pont = document.getElementById("csapat2pont")
-let cs1Pont = document.getElementById("csapat1pont")
-let minus1Gomb = document.getElementById("cs1minuspont")
-let minus2Gomb = document.getElementById("cs2minuspont")
+
 let pidoszal;
 let startGombPlusz = document.getElementById("startP");
 let stopGombPlusz = document.getElementById("stopP");
 stopGomb.disabled = true;
+let pperc = 0;
 
 function idoStart() {
     idoszal = setInterval(idok, 10);
@@ -63,58 +59,9 @@ function plusido()
 */
 
 
-function pontok1plusz()
-{
-    pont1++;
-    cs1Pont.innerHTML = pont1
-    if (pont1 > 0)
-        minus1Gomb.disabled = false
-}
 
 
-function pontok1minus()
-{
-    if (pont1 == 0)
-    {
-        minus1Gomb.disabled = true
-    }
-    else
-    {
-        pont1--;
-        let cs1Pont = document.getElementById("csapat1pont")
-        cs1Pont.innerHTML = pont1
-    }
 
-}
-
-
-function pontok2plusz()
-{
-    pont2++;
-    cs2Pont.innerHTML = pont2
-    if (pont2 > 0)
-        minus2Gomb.disabled = false
-    
-}
-
-
-function pontok2minus()
-{
-    if (pont2 == 0 )
-    {
-        minus2Gomb.disabled = true
-    }
-    else
-    {
-        pont2--;
-        let cs2Pont = document.getElementById("csapat2pont")
-        cs2Pont.innerHTML = pont2
-    }
-
-}
-
-let pperc = parseInt(document.getElementById("plusszInput").value);
-pperc *= 60
 
 function pluszido()
 {
@@ -137,7 +84,9 @@ function pluszido()
 }
 
 function idoStartPlusz() {
-    pidoszalidoszal = setInterval(pluszido, 1000);
+    pperc = parseInt(document.getElementById("plusszInput").value);
+    pperc *= 60
+    pidoszal = setInterval(pluszido, 1000);
     startGombPlusz.disabled = true;
     stopGombPlusz.disabled = false;
 }

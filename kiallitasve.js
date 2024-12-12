@@ -4,7 +4,7 @@ let idoszalve = setInterval(tickve,1000)
 function Idokezelesve()
 {
     let neve = document.getElementById("nevve").value
-    let ido = parseInt(document.getElementById("idove").value)
+    let ido = parseInt(document.getElementById("idove").value) *60
 
     listave.push({nevek:neve, time:ido})
     console.log(listave)

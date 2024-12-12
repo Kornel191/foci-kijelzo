@@ -4,7 +4,7 @@ let idoszalha = setInterval(tick,1000)
 function Idokezeles()
 {
     let neve = document.getElementById("nev").value
-    let ido = parseInt(document.getElementById("ido").value)
+    let ido = parseInt(document.getElementById("ido").value) * 60
 
     lista.push({nevek:neve, time:ido})
     console.log(lista)
