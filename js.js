@@ -4,20 +4,19 @@ let startGomb = document.getElementById("start");
 let stopGomb = document.getElementById("stop"); 
 let pluszidoszal;
 let pluszidoGomb = document.getElementById("pluszido"); 
-stopGomb.disabled = true;
-
 let pont1 = 0
 let pont2 = 0
-
 let cs2Pont = document.getElementById("csapat2pont")
 let cs1Pont = document.getElementById("csapat1pont")
-
 let minus1Gomb = document.getElementById("cs1minuspont")
 let minus2Gomb = document.getElementById("cs2minuspont")
-
+let pidoszal;
+let startGombPlusz = document.getElementById("startP");
+let stopGombPlusz = document.getElementById("stopP");
+stopGomb.disabled = true;
 
 function idoStart() {
-    idoszal = setInterval(idok, 1000);
+    idoszal = setInterval(idok, 10);
     startGomb.disabled = true;
     stopGomb.disabled = false;
 }
@@ -36,7 +35,7 @@ function idok() {
     }
     else 
     {
-        clearInterval(idok);
+        clearInterval(idoszal);
         hozzaadasContainer.style.display = 'block'; 
         alert('Lejárt az idő!');
     }
@@ -44,6 +43,14 @@ function idok() {
     let m = Math.floor(ido / 60);
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
+    
+    if(ido == 0)
+    {
+        startGombPlusz.disabled = false;
+        stopGombPlusz.disabled = false;
+    }
+
+        
 }
 
 function plusido()
@@ -107,10 +114,42 @@ function pontok2minus()
 }
 
 
+function pluszido()
+{
+    let pperc = parseInt(document.getElementById("plusszInput").value) * 60;
+    let pluszora = document.getElementById("plusztimer");
+    if(pperc > 0)
+    {
+        pperc--;
+    }
+    else 
+    {
+        clearInterval(pidoszal);
+        //hozzaadasContainer.style.display = 'block'; 
+        alert('Lejárt az idő!');
+    }
+
+    let pm = Math.floor(pperc / 60);
+    let ps = pperc % 60;
+    pluszora.innerHTML = `${pm}:${ps}`;
+    
+}
+
+function idoStart() {
+    pidoszalidoszal = setInterval(pluszido, 1000);
+    startGombPlusz.disabled = true;
+    stopGombPlusz.disabled = false;
+}
+function stop() {
+    clearInterval(pidoszal);
+    startGombPlusz.disabled = false;
+    stopGombPlusz.disabled = true; 
+}
+
 
 /*
 let pidoszal;
-let pperc = parseInt(document.getElementById("plusszInput").value) * 60;
+
 
 function pluszidoszal()
 {
