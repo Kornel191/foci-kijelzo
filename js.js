@@ -36,7 +36,7 @@ function idok() {
     else 
     {
         clearInterval(idoszal);
-        hozzaadasContainer.style.display = 'block'; 
+        //hozzaadasContainer.style.display = 'block'; 
         alert('Lejárt az idő!');
     }
 
@@ -52,7 +52,7 @@ function idok() {
 
         
 }
-
+/*
 function plusido()
 {
     let perc = parseInt(document.getElementById("plusszInput").value);
@@ -60,7 +60,7 @@ function plusido()
     pluszidoGomb.disabled = true
     perc.disabled = true
 }
-
+*/
 
 
 function pontok1plusz()
@@ -113,10 +113,12 @@ function pontok2minus()
 
 }
 
+let pperc = parseInt(document.getElementById("plusszInput").value);
+pperc *= 60
 
 function pluszido()
 {
-    let pperc = parseInt(document.getElementById("plusszInput").value) * 60;
+    
     let pluszora = document.getElementById("plusztimer");
     if(pperc > 0)
     {
@@ -132,68 +134,15 @@ function pluszido()
     let pm = Math.floor(pperc / 60);
     let ps = pperc % 60;
     pluszora.innerHTML = `${pm}:${ps}`;
-    
 }
 
-function idoStart() {
+function idoStartPlusz() {
     pidoszalidoszal = setInterval(pluszido, 1000);
     startGombPlusz.disabled = true;
     stopGombPlusz.disabled = false;
 }
-function stop() {
+function stopPlusz() {
     clearInterval(pidoszal);
     startGombPlusz.disabled = false;
     stopGombPlusz.disabled = true; 
 }
-
-
-/*
-let pidoszal;
-
-
-function pluszidoszal()
-{
-    if(ido ==0)
-    {
-        let pluszora = document.getElementById("plusztimer");
-        if(pperc > 0)
-        {
-            pperc--;
-        }
-        else 
-        {
-            clearInterval(pidoszal);
-    
-        }
-    
-        let pm = Math.floor(pperc / 60);
-        let ps = pperc % 60;
-        pluszora.innerHTML = `${pm}:${ps}`;
-    }
-
-
-}
-*/
-
-        /*hozzaadasContainer.style.display = 'block'; 
-        alert('Lejárt az idő!');*/
-
-
-
-
-
-
-
-
-/*
-function pluszido() 
-{
-    let plusz = parseInt(document.getElementById("plusszInput").value) * 60;
-
-}*/
-
-
-
-//hozzaadasButton.addEventListener('click', pluszido);
-
-
