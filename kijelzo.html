@@ -26,17 +26,19 @@
     </div>
     <div class="mutato">
         <h1>SZÁMLÁLÓ</h1>
-        <div id="timer">10:00</div>
+        <div id="timer">00:00</div>
         <!--<button id="toggleButton" onclick="stop()">Stop</button>-->
         <button type="button" id="start" onclick="idoStart()">Start</button>
         <button type="button" id="stop" onclick="stop()">Stop</button>
+        <br>
+        <button type="button" disabled id="ujra" onclick="ujra()">2. félidő elindítása</button>
     </div>
     <div class="eredmeny2">
         <h1 id="csapat2NevKi"></h1> 
         <br>
         <p id="csapat2pont">0</p>
         <br>
-        <button id="cs2minuspont" onclick="pontok2minus()" type="button" class="gomb">-</button>
+        <button id="cs2minuspont" disabled onclick="pontok2minus()" type="button" class="gomb">-</button>
         <button id="cs2pluszpont" onclick="pontok2plusz()" type="button" class="gomb">+</button>
     </div>
 </div>

@@ -42,7 +42,7 @@ function pontok2plusz()
 function pontok2minus()
 {
     pont2--;
-    if (pont2 == 0 )
+    if (pont2 == 0)
     {
         minus2Gomb.disabled = true
     }

@@ -1,10 +1,10 @@
-let ido = 60 * 10;
+let ido = 0;
 let idoszal;
 let startGomb = document.getElementById("start");
 let stopGomb = document.getElementById("stop"); 
 let pluszidoszal;
 let pluszidoGomb = document.getElementById("pluszido"); 
-
+let felido = document.getElementById("ujra");
 let pidoszal;
 let startGombPlusz = document.getElementById("startP");
 let stopGombPlusz = document.getElementById("stopP");
@@ -23,30 +23,38 @@ function stop() {
     stopGomb.disabled = true; 
 }
 
+
+
 function idok() {
     let ora = document.getElementById("timer");
-    if(ido > 0)
+    if(ido < (60*20))
     {
-        ido--;
+        ido++;
     }
     else 
     {
         clearInterval(idoszal);
-        //hozzaadasContainer.style.display = 'block'; 
-        alert('Lejárt az idő!');
+        //hozzaadasContainer.style.display = 'block';
+        felido.disabled = false;
+        startGombPlusz.disabled = false;
+        stopGombPlusz.disabled = false;
+
     }
 
     let m = Math.floor(ido / 60);
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
     
-    if(ido == 0)
-    {
-        startGombPlusz.disabled = false;
-        stopGombPlusz.disabled = false;
-    }
+}
 
-        
+function ujra()
+{
+    ido = 0;
+    idoszal = setInterval(idok, 10);
+    startGomb.disabled = true;
+    stopGomb.disabled = false;
+    felido.disabled = true;
+
 }
 /*
 function plusido()
@@ -75,7 +83,7 @@ function pluszido()
     {
         clearInterval(pidoszal);
         //hozzaadasContainer.style.display = 'block'; 
-        alert('Lejárt az idő!');
+        //alert('Lejárt az idő!');
     }
 
     let pm = Math.floor(pperc / 60);
