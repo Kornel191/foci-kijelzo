@@ -50,3 +50,4 @@ function pontok2minus()
     cs2Pont.innerHTML = pont2
 
 }
+

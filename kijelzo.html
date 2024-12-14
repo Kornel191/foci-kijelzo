@@ -31,7 +31,7 @@
         <button type="button" id="start" onclick="idoStart()">Start</button>
         <button type="button" id="stop" onclick="stop()">Stop</button>
         <br>
-        <button type="button" disabled id="ujra" onclick="ujra()">2. félidő elindítása</button>
+        <button type="button" disabled id="ujra" onclick="ujra()">Új félidő elindítása</button>
     </div>
     <div class="eredmeny2">
         <h1 id="csapat2NevKi"></h1> 
@@ -67,6 +67,8 @@
         <h1>Hosszabbítás</h1>
         <input type="number" id="plusszInput" placeholder="Perc" min="1" max="10"><br>
         <div id="plusztimer">00:00</div>
+        <br>
+        <button type="button" id="hosszkezdes" disabled onclick="hosszkezd()">Hosszabítás kezdése</button>
         <br>
         <button type="button" id="startP" disabled onclick="idoStartPlusz()">Start</button>
         <button type="button" id="stopP" disabled onclick="stopPlusz()">Stop</button>

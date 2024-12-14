@@ -10,6 +10,7 @@ let startGombPlusz = document.getElementById("startP");
 let stopGombPlusz = document.getElementById("stopP");
 stopGomb.disabled = true;
 let pperc = 0;
+let szamol = 0;
 
 function idoStart() {
     idoszal = setInterval(idok, 10);
@@ -30,21 +31,36 @@ function idok() {
     if(ido < (60*20))
     {
         ido++;
+        szamol++
     }
     else 
     {
         clearInterval(idoszal);
         //hozzaadasContainer.style.display = 'block';
         felido.disabled = false;
-        startGombPlusz.disabled = false;
-        stopGombPlusz.disabled = false;
+
 
     }
 
     let m = Math.floor(ido / 60);
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
-    
+
+
+    if ( szamol == 2*(60*20))
+        {
+            hosszkezdGomb.disabled = false;
+            stopGombPlusz.disabled = false;
+            felido.disabled = true;
+            if(pont1 > pont2)
+                alert("A(z)" + nev1 + "csapat nyert " + pont1 + " góllal.")
+            else if(pont1 < pont2)
+                alert("A(z)" + nev2 + "csapat nyert " + pont2 + " góllal.")
+            else 
+                alert("Jelemleg az állás döntetlen. Mindkét csapat " + pont1 + " gólt rúgott. A hosszabítás ezen még váltotathat.")
+
+        }
+
 }
 
 function ujra()
@@ -54,8 +70,11 @@ function ujra()
     startGomb.disabled = true;
     stopGomb.disabled = false;
     felido.disabled = true;
-
 }
+
+
+
+
 /*
 function plusido()
 {
@@ -65,11 +84,6 @@ function plusido()
     perc.disabled = true
 }
 */
-
-
-
-
-
 
 function pluszido()
 {
@@ -84,6 +98,12 @@ function pluszido()
         clearInterval(pidoszal);
         //hozzaadasContainer.style.display = 'block'; 
         //alert('Lejárt az idő!');
+        if(pont1 > pont2)
+            alert("A(z)" + nev1 + "csapat nyert " + pont1 + " góllal.")
+        else if(pont1 < pont2)
+            alert("A(z)" + nev2 + "csapat nyert " + pont2 + " góllal.")
+        else 
+            alert("Döntetlen. Mindkét csapat " + pont1 + " gólt rúgott.")
     }
 
     let pm = Math.floor(pperc / 60);
@@ -91,9 +111,20 @@ function pluszido()
     pluszora.innerHTML = `${pm}:${ps}`;
 }
 
-function idoStartPlusz() {
+let hosszkezdGomb = document.getElementById("hosszkezdes")
+
+function hosszkezd()
+{
     pperc = parseInt(document.getElementById("plusszInput").value);
     pperc *= 60
+    pidoszal = setInterval(pluszido, 1000);
+    startGombPlusz.disabled = true;
+    stopGombPlusz.disabled = false;
+    hosszkezdGomb.disabled = true
+}
+
+function idoStartPlusz() {
+
     pidoszal = setInterval(pluszido, 1000);
     startGombPlusz.disabled = true;
     stopGombPlusz.disabled = false;
@@ -103,3 +134,4 @@ function stopPlusz() {
     startGombPlusz.disabled = false;
     stopGombPlusz.disabled = true; 
 }
+
