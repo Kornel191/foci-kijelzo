@@ -44,25 +44,23 @@
 </div>
 <div class="torzs">
     <div class="kiallitasHazai">
-        <main>
         <h2>Kiállítás</h2><br>
+        <main>
             <form action="">
                 <input type="text" id="nev" placeholder="Név:"><br>
                 <input type="number" id="ido" min="1" placeholder="Idő" value="1">
-    
-                
             </form>
             <br>
             <button type="button" id="gomb" onclick="Idokezeles()">Hozzáadás</button>
-        
             <br>
-        <ul id="felsor">
+            <div  class="kiallit">
+                <ul id="felsor">
 
-        </ul>
-        
-        
-        
+                 </ul>
+            </div>
+        </main>     
     </div>
+
     <div id="plussz" class="pluszido">
         <h1>Hosszabbítás</h1>
         <input type="number" id="plusszInput" placeholder="Perc" min="1" max="10" value="1"><br>
@@ -73,22 +71,25 @@
         <button type="button" id="startP" disabled onclick="idoStartPlusz()">Start</button>
         <button type="button" id="stopP" disabled onclick="stopPlusz()">Stop</button>
     </div>
+
+
     <div class="kiallitasVendeg">
         <h2>Kiállítás</h2><br>
+        <main>
         <form action="">
             <input type="text" id="nevve" placeholder="Név:"><br>
             <input type="number" id="idove" min="1" placeholder="Idő" value="1">
         </form>
-
         <br>
         <button type="button" id="gomb" onclick="Idokezelesve()">Hozzáadás</button> 
+        <br>
+        <div  class="kiallit">
+            <ul id="felsorve">
 
-        <ul id="felsorve">
-
-        </ul>
-        
+            </ul>
+        </div> 
+    </main> 
     </div>
-
 </div>
 
 

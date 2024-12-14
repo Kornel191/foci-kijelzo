@@ -37,7 +37,7 @@ body{
     left: 466px;
     gap: 0px;
     border: 1px 0px 0px 0px;
-    margin-top: 30%;   
+    margin-top: 40%;   
     flex-direction: column
     
 }
@@ -151,7 +151,6 @@ button {
     flex-direction: column;
     border-radius: 20px;
     margin-left: 80px;
-   
     justify-content: center
 }
 .pluszido{
@@ -188,4 +187,11 @@ button {
     border-radius: 20px;
     margin-right: 80px;
     justify-content: center
+}
+
+.kiallit{
+    margin-top: 20px;
+}
+ul{
+   list-style-image: url(img/icon.jpg); 
 }

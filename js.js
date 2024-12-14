@@ -13,7 +13,7 @@ let pperc = 0;
 let szamol = 0;
 
 function idoStart() {
-    idoszal = setInterval(idok, 10);
+    idoszal = setInterval(idok, 1000);
     startGomb.disabled = true;
     stopGomb.disabled = false;
 }
