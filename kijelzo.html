@@ -16,9 +16,7 @@
 
 <div class="kozep">
     <div class="eredmeny1">
-        <h1 id="csapat1NevKi">
-            
-        </h1>
+        <h1 id="csapat1NevKi"></h1>
         <br>
         <p id="csapat1pont">0</p>
         <br>
@@ -32,31 +30,30 @@
         <!--<button id="toggleButton" onclick="stop()">Stop</button>-->
         <button type="button" id="start" onclick="idoStart()">Start</button>
         <button type="button" id="stop" onclick="stop()">Stop</button>
-        
-    
     </div>
     <div class="eredmeny2">
-        <h1 id="csapat2NevKi">
-            
-        </h1> <br>
+        <h1 id="csapat2NevKi"></h1> 
+        <br>
         <p id="csapat2pont">0</p>
         <br>
-        <button id="cs2minuspont" disabled onclick="pontok2minus()" type="button">-</button>
-        <button id="cs2pluszpont" onclick="pontok2plusz()" type="button">+</button>
+        <button id="cs2minuspont" onclick="pontok2minus()" type="button" class="gomb">-</button>
+        <button id="cs2pluszpont" onclick="pontok2plusz()" type="button" class="gomb">+</button>
     </div>
 </div>
 <div class="torzs">
     <div class="kiallitasHazai">
         <main>
-        <h2>Kiállítás</h2>
+        <h2>Kiállítás</h2><br>
             <form action="">
                 <input type="text" id="nev" placeholder="Név:"><br>
-                <input type="number" id="ido" min="1" placeholder="Idő"><br>
+                <input type="number" id="ido" min="1" placeholder="Idő">
     
-                <button type="button" id="gomb" onclick="Idokezeles()">Hozzáadás</button>
+                
             </form>
+            <br>
+            <button type="button" id="gomb" onclick="Idokezeles()">Hozzáadás</button>
         
-        
+            <br>
         <ul id="felsor">
 
         </ul>
@@ -73,13 +70,15 @@
         <button type="button" id="stopP" disabled onclick="stopPlusz()">Stop</button>
     </div>
     <div class="kiallitasVendeg">
-        <h2>Kiállítás</h2>
+        <h2>Kiállítás</h2><br>
         <form action="">
             <input type="text" id="nevve" placeholder="Név:"><br>
-            <input type="number" id="idove" min="1" placeholder="Idő"><br>
-
-            <button type="button" id="gomb" onclick="Idokezelesve()">Hozzáadás</button>
+            <input type="number" id="idove" min="1" placeholder="Idő">
         </form>
+
+        <br>
+        <button type="button" id="gomb" onclick="Idokezelesve()">Hozzáadás</button> 
+
         <ul id="felsorve">
 
         </ul>
