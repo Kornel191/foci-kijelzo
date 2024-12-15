@@ -1,32 +1,44 @@
 let ido = 0;
 let idoszal;
 let startGomb = document.getElementById("start");
-let stopGomb = document.getElementById("stop"); 
-let pluszidoszal;
-let pluszidoGomb = document.getElementById("pluszido"); 
+let stopGomb = document.getElementById("stop");
+
 let felido = document.getElementById("ujra");
+
 let pidoszal;
 let startGombPlusz = document.getElementById("startP");
 let stopGombPlusz = document.getElementById("stopP");
-stopGomb.disabled = true;
+let hosszkezdGomb = document.getElementById("hosszkezdes");
 let pperc = 0;
+
 let szamol = 0;
+
+
 
 function idoStart() {
     idoszal = setInterval(idok, 1000);
     startGomb.disabled = true;
     stopGomb.disabled = false;
 }
-
 function stop() {
     clearInterval(idoszal);
     startGomb.disabled = false;
     stopGomb.disabled = true; 
 }
-
-
-
 function idok() {
+
+    if ( szamol == 2*(60*20))
+    {
+        hosszkezdGomb.disabled = false;
+        stopGombPlusz.disabled = false;
+        felido.disabled = true;
+        if(pont1 > pont2)
+            alert("A(z)" + nev1 + "csapat nyert " + pont1 + " góllal.")
+        else if(pont1 < pont2)
+            alert("A(z)" + nev2 + "csapat nyert " + pont2 + " góllal.")
+        else 
+            alert("Jelemleg az állás döntetlen. Mindkét csapat " + pont1 + " gólt rúgott. A hosszabítás ezen még váltotathat.")
+    }
     let ora = document.getElementById("timer");
     if(ido < (60*20))
     {
@@ -38,56 +50,24 @@ function idok() {
         clearInterval(idoszal);
         //hozzaadasContainer.style.display = 'block';
         felido.disabled = false;
-
-
     }
-
     let m = Math.floor(ido / 60);
     let s = ido % 60;
     ora.innerHTML = `${m}:${s}`;
-
-
-    if ( szamol == 2*(60*20))
-        {
-            hosszkezdGomb.disabled = false;
-            stopGombPlusz.disabled = false;
-            felido.disabled = true;
-            if(pont1 > pont2)
-                alert("A(z)" + nev1 + "csapat nyert " + pont1 + " góllal.")
-            else if(pont1 < pont2)
-                alert("A(z)" + nev2 + "csapat nyert " + pont2 + " góllal.")
-            else 
-                alert("Jelemleg az állás döntetlen. Mindkét csapat " + pont1 + " gólt rúgott. A hosszabítás ezen még váltotathat.")
-
-        }
-
 }
+
+
 
 function ujra()
 {
     ido = 0;
-    idoszal = setInterval(idok, 10);
+    idoszal = setInterval(idok, 1000);
     startGomb.disabled = true;
     stopGomb.disabled = false;
     felido.disabled = true;
 }
-
-
-
-
-/*
-function plusido()
-{
-    let perc = parseInt(document.getElementById("plusszInput").value);
-    ido+= (perc*60)
-    pluszidoGomb.disabled = true
-    perc.disabled = true
-}
-*/
-
 function pluszido()
 {
-    
     let pluszora = document.getElementById("plusztimer");
     if(pperc > 0)
     {
@@ -105,14 +85,10 @@ function pluszido()
         else 
             alert("Döntetlen. Mindkét csapat " + pont1 + " gólt rúgott.")
     }
-
     let pm = Math.floor(pperc / 60);
     let ps = pperc % 60;
     pluszora.innerHTML = `${pm}:${ps}`;
 }
-
-let hosszkezdGomb = document.getElementById("hosszkezdes")
-
 function hosszkezd()
 {
     pperc = parseInt(document.getElementById("plusszInput").value);
@@ -122,7 +98,6 @@ function hosszkezd()
     stopGombPlusz.disabled = false;
     hosszkezdGomb.disabled = true
 }
-
 function idoStartPlusz() {
 
     pidoszal = setInterval(pluszido, 1000);
